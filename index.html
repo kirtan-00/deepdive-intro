@@ -629,7 +629,7 @@ body {
   background: transparent;
   align-items: stretch;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 0;
 }
 .s4 .bg-flair { display: none; }
@@ -803,12 +803,13 @@ body {
 /* ====== AQUARIUM — fish swimming right-to-left ====== */
 .s4 .aquarium {
   position: absolute;
-  left: 0; right: 0; top: 38vh; bottom: 0;  /* strictly below the title block */
+  left: 0; right: 0; top: 0; bottom: 38vh;  /* fish in top portion, title sits below */
   overflow: hidden;
   z-index: 2;
   pointer-events: none;
 }
-@media (max-width: 768px) { .s4 .aquarium { top: 32vh; } }
+.s4 .header { padding: 24px 6vw 56px; }
+@media (max-width: 768px) { .s4 .aquarium { bottom: 32vh; } }
 .s4 .fish {
   position: absolute;
   left: 0;
@@ -1269,7 +1270,7 @@ body {
   <div class="sticky">
     <div class="header">
       <div class="label">It's not an accident</div>
-      <h2>Eight sentences. <strong>$4.2 trillion</strong> in cumulative brand equity. <em>Each one has its own dive.</em></h2>
+      <h2>Every sentence in this ocean built an empire. <strong>$4.2 trillion</strong> in cumulative brand equity. <em>Each one has its own dive.</em></h2>
     </div>
     <div class="aquarium">
       <!-- BIG FISH — 8 famous slogans, the "whales" — slow & prominent -->
