@@ -239,17 +239,27 @@ body {
   .s5 .counter { font-size: clamp(96px, 30vw, 200px); }
   .s5 .post { font-size: clamp(14px, 3.5vw, 22px); padding: 0 6vw; }
   /* Scene 6 */
-  .s6 .sticky { padding: 60px 5vw 40px; }
-  .s6 .headline { font-size: clamp(22px, 5.5vw, 40px); margin-bottom: 32px; }
-  .s6 .bar-row { gap: 10px; }
-  .s6 .bar-row .name { width: 90px; font-size: 8px; letter-spacing: 1px; }
-  .s6 .bar-track { height: 18px; }
-  .s6 .bar-row .num { width: 64px; font-size: 16px; }
+  .s6 .sticky { padding: 40px 5vw 32px; justify-content: flex-start; }
+  .s6 .headline { font-size: clamp(18px, 4.4vw, 28px); margin-bottom: 22px; line-height: 1.15; }
+  .s6 .headline strong { font-size: 1.4em; letter-spacing: -1px; }
+  .s6 .bars { gap: 10px; }
+  .s6 .bar-row { gap: 8px; }
+  .s6 .bar-row .name { width: 78px; font-size: 8px; letter-spacing: 1px; }
+  .s6 .bar-track { height: 16px; background: rgba(255,255,255,0.14); }
+  .s6 .bar-fill { width: var(--w, 0) !important; transition: none; }
+  .s6 .bar-row .num { width: 56px; font-size: 14px; }
   /* Scene 7 */
-  .s7 .wordmark { font-size: clamp(40px, 14vw, 96px); letter-spacing: -2px; }
+  .s7 .wordmark { font-size: clamp(40px, 14vw, 88px); letter-spacing: -2px; }
   .s7 .promise-text { font-size: 13px; padding: 0 6vw; }
-  .s7 .stats-strip { gap: 24px; flex-direction: column; align-items: center; bottom: 24px; }
+  .s7 .stats-strip {
+    position: static;
+    margin-top: 28px;
+    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+  }
   .s7 .stats-strip strong { font-size: 22px; }
+  .trench-reached { display: none; }
   /* Atmosphere — lighter on mobile to save battery */
   .deep-particles { opacity: calc(max(0, var(--scroll, 0) - 0.3) * 1.2) !important; }
   .bubbles { opacity: calc(0.25 + var(--scroll, 0) * 0.4) !important; }
